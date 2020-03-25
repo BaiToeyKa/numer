@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +11,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Root
+Route::get('homepage', function(){
+    return view('home');
 });
+
+Route::resource('Bisection', 'bisectionController');
+Route::get('show/Bisection', 'ShowbisectionController@index');
+
+ Route::get('FalsePosition', 'FalsePositionController@index');
+ Route::get('show/FalsePosition', 'ShowFalsePositionController@index');
+
+ Route::get('OnePointIteration', 'OnePointIterationController@index');
+ Route::get('show/OnePointIteration', 'ShowOnePointIterationController@index');
+//
+Route::get('NewtonRarpson', 'NewtonRaspsonController@index');
+Route::get('show/NewtonRarpson', 'ShowNewtonRarpsoncontroller@index');
+//
+// Route::get('Secant', 'SecantController@index');
+// Route::get('show/Secant', 'ShowSecantControlle@index');
