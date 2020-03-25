@@ -33,12 +33,12 @@
       <div class="dropdown-menu">
                         <a class="dropdown-item" href="Bisection">Bisection Method</a>
                         <a class="dropdown-item" href="FalsePosition">False-Position Method</a>
-                        <a class="dropdown-item" href="OnePointIteration">Simple One-Point Iteration</a>
+                        <a class="dropdown-item" href="OnePointIteration">One-Point Iteration</a>
                         <a class="dropdown-item" href="NewtonRarpson">Newton-Ralphson Method</a>
                         <a class="dropdown-item" href="#">Secant Method</a>
                     </div>
     </li>
-    
+
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
         Interpolation
