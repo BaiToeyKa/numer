@@ -1,9 +1,9 @@
 @extends('Navbar')
 @section('body')
 <br>
-<h3 style="text-align: center" class="text-danger">คำนวณหารากของสมการ</h3><br>
-	<div>
-		<table class="table table-hover" width="50" class="w3-table w3-striped">
+
+
+		<table class="table table-borderless">
     		<thead>
       			<tr class="w3-green">
                   <th><div align="center">XL</div></th>
@@ -26,5 +26,5 @@
     		</tbody>
 			@endforeach
   		</table>
-    </div>
+    
 @endsection

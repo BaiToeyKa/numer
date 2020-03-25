@@ -38,22 +38,7 @@
                         <a class="dropdown-item" href="#">Secant Method</a>
                     </div>
     </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Liner Algebraic Equations
-      </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Cramer's Rule</a>
-        <a class="dropdown-item" href="#">Gauss Elimination Method</a>
-        <a class="dropdown-item" href="#">Gauss Jordan Method</a>
-        <a class="dropdown-item" href="#">Martix Inversion Method</a>
-        <a class="dropdown-item" href="#">LU Decomposition Method</a>
-        <a class="dropdown-item" href="#">Cholesky Decomposition Method</a>
-        <a class="dropdown-item" href="#">Jacobi Iteration Method</a>
-        <a class="dropdown-item" href="#">Gauss Seidel Iteration Method</a>
-        <a class="dropdown-item" href="#">Conjugate Gradient Method</a>
-      </div>
-    </li>
+    
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
         Interpolation

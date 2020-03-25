@@ -14,51 +14,51 @@
 <br>
 <br>
 <div class="shadow px-3 py-3 main col-10 h-100 rounded mx-auto" align="center" style="background-color:#f1f1f1">
-	<h3 style="text-align: center" class="text-danger">Exemple</h3>
+	<h3 style="text-align: center" class="text-danger">โจทย์</h3>
 	<br>
-	<h5><p>จงใช้วิธี Bisection เพื่อคำนวณหาค่า x^3-x^2+2 โดยกำหนดค่าขอบเขตเริ่มต้น ระหว่าง 2 และ 3</h5>
+	<h5><p>จงใช้วิธี Bisection เพื่อคำนวณหาค่า x^3-x^2+2 กำหนดค่าขอบเขตเริ่มต้น ระหว่าง 2 และ 3</h5>
 	
-<?php 
-	$EPSILON = 0.01; 
+<?php
+	$EPSILON = 0.01;
 	$XMOLD = 0;
 
-	function func($x) 
-	{ 
+	function func($x)
+	{
 		return $x * $x * $x - $x * $x + 2; //x^3 - x^2 + 2
-	} 
+	}
 
-	// Prints root of func(x) 
-	// with error of EPSILON 
-	function bisection($XL, $XR, $XMOLD) 
-	{ 
-		global $EPSILON; 
-		if (func($XL) * func($XR) >= 0) 
-		{ 
-			echo "You have not assumed " . "right a and b","\n"; 
-			return; 
-		} 
+	// Prints root of func(x)
+	// with error of EPSILON
+	function bisection($XL, $XR, $XMOLD)
+	{
+		global $EPSILON;
+		if (func($XL) * func($XR) >= 0)
+		{
+			echo "You have not assumed " . "right a and b","\n";
+			return;
+		}
 
-		$XM = 0; 
+		$XM = 0;
 		$ERROR = 100;
 		$XMOLD = 0;
-		while (($XR - $XL) >= $EPSILON) 
-		{ 
+		while (($XR - $XL) >= $EPSILON)
+		{
 			$XMOLD = $XM;
-			// Find middle point 
-			$XM = ($XL + $XR) / 2; 
+			// Find middle point
+			$XM = ($XL + $XR) / 2;
 
 			// Check if middle 0
-			// point is root 
+			// point is root
 			$ERROR = abs(($XM-$XMOLD)/$XM);
-			if (func($XM) == 0.0) 
-				break; 
+			if (func($XM) == 0.0)
+				break;
 
-			// Decide the side to 
-			// repeat the steps 
-			else if (func($XM) * func($XL) < 0) 
-				$XR = $XM; 
+			// Decide the side to
+			// repeat the steps
+			else if (func($XM) * func($XL) < 0)
+				$XR = $XM;
 			else
-				$XL = $XM; 
+				$XL = $XM;
 
 			$dataInsert = [
 				'XL'=>$XL,
@@ -69,15 +69,15 @@
 			];
 			// dd($dataInsert);
 			\App\Bisection::insert($dataInsert);
-		} 
-		echo "The value of root is : " , $XM ,"The error is : ",$ERROR; 
+		}
+		echo "The value of root is : " , $XM ,"The error is : ",$ERROR;
 		return $XM;
-	} 
+	}
 
-	$XL =-2; 
+	$XL =-2;
 	$XR = 3;
 	$XMOLD = 0;
-	$XM = bisection($XL, $XR, $XMOLD); 
+	$XM = bisection($XL, $XR, $XMOLD);
 ?>
 </div>
 <br>
